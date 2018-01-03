@@ -20,10 +20,8 @@ var AppComponent = (function () {
         var _this = this;
         //grab users
         this.http.get('https://reqres.in/api/users')
-            .subscribe(function (data) {
-            console.log(data.json());
-            _this.users = data.json().data;
-        });
+            .map(function (res) { return res.json().data; })
+            .subscribe(function (users) { return _this.users = users; });
     };
     return AppComponent;
 }());
