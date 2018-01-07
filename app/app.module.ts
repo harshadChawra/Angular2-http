@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/catch';
 import { UserService } from './shared/services/user.service';
+import { UsersComponent } from './users/users.component';
 
 @NgModule({
   imports: [ BrowserModule, HttpModule, FormsModule ],
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, UsersComponent ],
   providers: [UserService],
   bootstrap: [ AppComponent ]
 })
