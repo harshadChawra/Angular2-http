@@ -16,6 +16,8 @@ require("rxjs/add/operator/toPromise");
 require("rxjs/add/operator/catch");
 var user_service_1 = require("./shared/services/user.service");
 var users_component_1 = require("./users/users.component");
+var app_routing_1 = require("./app.routing");
+var user_list_component_1 = require("./users/user-list/user-list.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -23,8 +25,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule],
-        declarations: [app_component_1.AppComponent, users_component_1.UsersComponent],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, forms_1.FormsModule, app_routing_1.routing],
+        declarations: [app_component_1.AppComponent, users_component_1.UsersComponent, user_list_component_1.UserListComponent],
         providers: [user_service_1.UserService],
         bootstrap: [app_component_1.AppComponent]
     })
